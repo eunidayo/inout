@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <!-- 부트스트랩 임포트 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,48 +20,189 @@
   <link rel="stylesheet" href="/inout/css/main.css">
 
   <title>main</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xml2js/0.4.23/xml2js.min.js"></script>
 </head>
+</head>
+
+
 
 <body>
 
-  <div class="container">
-    <!-- 콘텐츠 -->
-  </div>
-
-  <!-- 인바디 -->
-  <!-- <div class="information">
-    <h1>InBody 검사</h1>
-    <form id="inbodyForm">
-      <div class="form-group">
-        <label for="weight">체중 (kg):</label>
-        <input type="number" id="weight" step="0.1" required>
+  <!-- sec01 -->
+  <!-- <div class="container mt-5">
+    <h1>음식 데이터 기반 원형 그래프</h1>
+    <form id="foodForm">
+      <div class="mb-3">
+        <label for="foodName" class="form-label">음식 이름:</label>
+        <input type="text" id="foodName" class="form-control" required>
       </div>
-      <div class="form-group">
-        <label for="height">신장 (cm):</label>
-        <input type="number" id="height" step="0.1" required>
-      </div>
-      <div class="form-group">
-        <label for="age">나이:</label>
-        <input type="number" id="age" step="1" required>
-      </div>
-      <div class="form-group">
-        <label for="gender">성별:</label>
-        <select id="gender" required>
-          <option value="" disabled selected>선택하세요</option>
-          <option value="male">남성</option>
-          <option value="female">여성</option>
-        </select>
-      </div>
-      <button type="button" onclick="calculateBMI()">계산하기</button>
+      <button type="submit" class="btn btn-primary">음식 데이터 불러오기</button>
     </form>
-    <div class="result" id="result"></div>
+    <canvas id="myPieChart" width="400" height="400"></canvas>
   </div> -->
 
 
+  <section class="sec02">
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab('diet')">식단</button>
+        <button class="tab-button" onclick="openTab('water')">물</button>
+        <button class="tab-button" onclick="openTab('supplement')">영양제</button>
+      </div>
+
+      <div class="tab-content" id="diet">
+        <h2>식단</h2>
+        <p>식단에 대한 정보를 여기에 추가합니다.</p>
+        <!-- 예: <img src="diet.jpg" alt="식단 이미지"> -->
+      </div>
+
+      <div class="tab-content" id="water">
+        <h2>물</h2>
+        <p>물에 대한 정보를 여기에 추가합니다.</p>
+        <!-- 예: <img src="water.jpg" alt="물 이미지"> -->
+      </div>
+
+      <div class="tab-content" id="supplement">
+        <h2>영양제</h2>
+        <p>영양제에 대한 정보를 여기에 추가합니다.</p>
+        <!-- 예: <img src="supplement.jpg" alt="영양제 이미지"> -->
+      </div>
+    </div>
+  </section>
 
 
-  <!-- 프로필사진 변경 -->
-  <!-- <div class="profile-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="sec03">
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab('weight')">체중</button>
+      <button class="tab-button" onclick="openTab('inbody')">인바디</button>
+      <button class="tab-button" onclick="openTab('eye')">눈바디</button>
+    </div>
+
+
+    <!-- 체중 -->
+    <div class="tab-content" id="weight">
+      <p>나의 체중은?</p>
+      <h2 id="weightDisplay">00.0kg</h2>
+      <img src="/inout/images/main/sec03/sec03_weight.svg" alt="체중계">
+      <button class="w" onclick="showFooter()">기록하기</button>
+    </div>
+
+
+
+    <div class="overlay" id="overlay" onclick="hideFooter()"></div>
+    <div class="footer" id="footer">
+      <div>
+        <p>체중 입력</p><a href="#"><span class="material-symbols-outlined">
+            close
+          </span></a>
+      </div>
+      <input type="number" id="weightInput" placeholder="00.0kg" step="0.1">
+      <button onclick="updateWeight()">완료</button>
+    </div>
+
+
+
+
+
+
+    <!-- 인바디 -->
+    <div class="tab-content" id="inbody">
+
+      <p>간단하게 해보는 인바디! </p>
+
+      <img src="/inout/images/main/sec03/sec03_inbody.svg" alt="인바디">
+
+      <a href="/inout/html/inbody_information.html"><button>검사하기</button></a>
+
+      <div class="bottom">
+        <div><img src="/inout/images/main/picture.svg" alt>
+          <p>기록 모아보기 !</p>
+        </div>
+        <button>보기</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- 눈바디 -->
+    <div class="tab-content" id="eye">
+      <p>오늘 내 눈바디는?</p>
+      <div class="human">
+        <div class="left" onclick="openFileDialog('left')">
+          <span class="material-symbols-outlined plus">add</span>
+          <img id="leftImage" src="/inout/images/main/sec03/sec03_eye_man.svg" alt="왼쪽">
+        </div>
+        <div class="right" onclick="openFileDialog('right')">
+          <span class="material-symbols-outlined plus">add</span>
+          <img id="rightImage" src="/inout/images/main/sec03/sec03_eye_woman.svg" alt="오른쪽">
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <img src="/inout/images/main/picture.svg" alt="">
+          <p>사진을 한눈에 !</p>
+        </div>
+        <button>눈바디 앨범</button>
+      </div>
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*" capture="environment" style="display:none"
+      onchange="previewImage(event)">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 프로필사진 변경 -->
+    <!-- <div class="profile-container">
     <img id="profileImg" class="profile-img" src="default-profile.jpg" alt="프로필 사진" onclick="openFileDialog()">
     <br>
     <button class="change-btn" onclick="openFileDialog()">사진 변경</button>
@@ -111,31 +254,25 @@
 
 
 
+    <footer class="bottom-nav">
+      <a href="#home" class="nav-item">
+        <i class="fas fa-home"></i>
+        <!-- <span>홈</span> -->
+      </a>
+      <a href="/inout/html/profile.html" class="nav-item">
+        <i class="fas fa-user"></i>
+        <!-- <span>마이페이지</span> -->
+      </a>
+    </footer>
 
 
-
-
-
-  <footer class="bottom-nav">
-    <a href="#home" class="nav-item">
-      <i class="fas fa-home"></i>
-      <!-- <span>홈</span> -->
-    </a>
-    <a href="/inout/html/profile.html" class="nav-item">
-      <i class="fas fa-user"></i>
-      <!-- <span>마이페이지</span> -->
-    </a>
-  </footer>
-
-
-
-  <!-- 부트스트랩 임포트 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <!-- swiper.js 임포트 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="/inout/js/main.js"></script>
+    <!-- 부트스트랩 임포트 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <!-- swiper.js 임포트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/inout/js/main.js"></script>
 </body>
 
 </html>

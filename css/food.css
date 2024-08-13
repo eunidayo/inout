@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+#searchForm {
+  margin-bottom: 20px;
+}
+#nutrientChart {
+  max-width: 600px;
+  margin: auto;
+}

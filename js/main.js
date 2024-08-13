@@ -1,46 +1,136 @@
-// 인바디
-// function calculateBMI() {
-//   const weight = parseFloat(document.getElementById('weight').value);
-//   const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
-//   const age = parseInt(document.getElementById('age').value);
-//   const gender = document.getElementById('gender').value;
 
-//   if (isNaN(weight) || isNaN(height) || isNaN(age) || height <= 0 || age <= 0 || !gender) {
-//     document.getElementById('result').innerText = '올바른 체중, 신장, 나이, 성별을 입력해주세요.';
-//     return;
-//   }
+function openTab(tabName) {
+  // 모든 탭 버튼과 콘텐츠를 비활성화합니다.
+  const buttons = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
 
-//   const bmi = weight / (height * height);
-//   let resultText = `당신의 BMI는 ${bmi.toFixed(2)}입니다. `;
+  buttons.forEach(button => button.classList.remove('active'));
+  contents.forEach(content => content.classList.remove('active'));
 
-//   if (bmi < 18.5) {
-//     resultText += '저체중입니다.';
-//   } else if (bmi < 24.9) {
-//     resultText += '정상체중입니다.';
-//   } else if (bmi < 29.9) {
-//     resultText += '과체중입니다.';
-//   } else {
-//     resultText += '비만입니다.';
-//   }
+  // 클릭한 버튼을 활성화하고, 관련 콘텐츠를 표시합니다.
+  document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+  document.getElementById(tabName).classList.add('active');
+}
 
-//   // 나이에 따른 추가 해석
-//   if (age < 18) {
-//     resultText += ' 나이대에 따른 건강 관리를 권장합니다.';
-//   } else if (age < 60) {
-//     resultText += ' 성인 건강 관리에 유의하세요.';
-//   } else {
-//     resultText += ' 노인 건강 관리에 유의하세요.';
-//   }
+// 페이지 로드 시 기본적으로 첫 번째 탭을 열어놓습니다.
+document.addEventListener('DOMContentLoaded', () => {
+  openTab('weight');
+});
 
-//   // 성별에 따른 추가 해석 (간단한 예시)
-//   if (gender === 'male') {
-//     resultText += ' 남성의 경우, 근육량을 유지하는 것이 중요합니다.';
-//   } else if (gender === 'female') {
-//     resultText += ' 여성의 경우, 체지방 감소에 유의하세요.';
-//   }
+function showFooter() {
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('footer').style.display = 'flex';
+}
 
-//   document.getElementById('result').innerText = resultText;
-// }
+function hideFooter() {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('footer').style.display = 'none';
+}
+
+function updateWeight() {
+  const weightInput = document.getElementById('weightInput').value;
+  const weightDisplay = document.getElementById('weightDisplay');
+  weightDisplay.textContent = `${weightInput}kg`;
+  hideFooter(); // Hide the footer and overlay after saving
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to open file dialog and set the target
+function openFileDialog(target) {
+  document.getElementById('fileInput').setAttribute('data-target', target);
+  document.getElementById('fileInput').click();
+}
+
+// Function to preview image and update the target element
+function previewImage(event) {
+  const fileInput = event.target;
+  const target = fileInput.getAttribute('data-target');
+  const file = fileInput.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const imgElement = document.getElementById(target + 'Image');
+      imgElement.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,3 +154,8 @@
 //     reader.readAsDataURL(file);
 //   }
 // }
+
+
+
+
+

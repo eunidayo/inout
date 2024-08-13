@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* 구글아이콘 (google font */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+/* 구름 산스 코드 */
+@font-face {
+  font-family: 'goorm-sans-code';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-code.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -----------------------------시작---------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'goorm-sans-code';
+  /* outline: 1px solid navy; */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.information {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background: #FF8D67;
+  max-width: 430px;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 70px 0;
+  color: #fff;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 10px;
+  position: relative;
+}
+.material-symbols-outlined {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+}
+
+#inbodyForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  color: #525252;
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  width: 74px;
+  height: 40px;
+  color: #fff;
+  background: #A44222;
+  border-radius: 20px;
+  border: none;
+  line-height: 40px;
+  /* 버튼 텍스트 수직 중앙 정렬 */
+  font-size: 16px;
+  /* 버튼 텍스트 크기 조절 */
+}
+button:hover {
+  opacity: 85%;
+}
+a {
+  color: #fff;
+}

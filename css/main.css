@@ -20,45 +20,440 @@
   font-family: 'goorm-sans-code';
   /* outline: 1px solid navy; */
 }
+/* 부트스트랩때문에 생기는 자동 마진 초기화 시키기 */
+p,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
 
 
 
 
-
-
-
-
-
-/* 인바디 */
-/* 
 body {
-  margin: 20px;
-  background: #FF8D67;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: s100vh; */
 }
-.information {
-  max-width: 600px;
-  margin: auto;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-input, select {
+
+/* sec02 */
+.sec02 {
+  max-width: 430px;
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  height: 730px;
+  background: #CC87E8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-button {
-  padding: 10px 15px;
+/* .tab-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
   font-size: 16px;
 }
-.result {
-  margin-top: 20px;
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
 }
- */
+
+.tab-content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.tab-content.active {
+  display: block;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec03 {
+  max-width: 430px;
+  width: 100%;
+  height: 730px;
+  background: #FF8D67;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 65px 16px 119px 16px;
+  position: relative;
+}
+
+.sec03 .tabs {
+  display: flex;
+  width: 100%;
+  gap: 22px;
+}
+
+.sec03 .tab-button {
+  color: #CE7759;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 21px;
+}
+
+.sec03 .tab-button.active {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 21px;
+}
+
+.sec03 .tab-content {
+  display: none;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.sec03 .tab-content p {
+  text-align: center;
+  font-weight: 800;
+  line-height: 21px;
+}
+
+.sec03 .tab-content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 21px;
+}
+
+.sec03 .tab-content.active {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #FF8D67;
+  border: none;
+}
+
+#weight button,
+#inbody button {
+  width: 100px;
+  height: 40px;
+  background: #A44222;
+  border-radius: 20px;
+}
+#weight button:hover,
+#inbody button:hover {
+  opacity: 85%;
+}
+
+.sec03 button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 430px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  /* Initially hidden */
+  z-index: 10;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 430px;
+  height: 230px;
+  gap: 10px;
+  display: none;
+  z-index: 20;
+  border-radius: 30px 30px 0 0;
+  background: #FFF;
+  padding: 20px;
+  color: #515151;
+}
+.footer div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer div .material-symbols-outlined {
+  color: #515151;
+}
+.footer p {
+  font-size: 18px;
+  width: 100%;
+}
+
+.footer input {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 32px;
+  border: none;
+  color: #515151;
+}
+
+.footer button {
+  background: #EFEFEF;
+  width: 100%;
+  color: #515151;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#inbody .bottom {
+  width: 100%;
+  display: flex;
+  padding-top: 75px;
+  justify-content: space-between;
+}
+
+
+
+#inbody .bottom div,
+#eye .bottom div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#inbody .bottom button,
+#eye .bottom button {
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  background: #FE7A53;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#eye .human {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  gap: 15px;
+
+}
+
+#eye .left,
+#eye .right {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  border-radius: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#eye .left .plus,
+#eye .right .plus {
+  position: absolute;
+  left: 145px;
+  top: 5px;
+  color: #E7E7E7;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+#eye .left img,
+#eye .right img {
+  width: 90%;
+}
+
+#eye .bottom {
+  width: 100%;
+  display: flex;
+  padding-top: 15px;
+  justify-content: space-between;
+}
+
+
+
+
+
+/* #eye .human {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  gap: 15px;
+}
+
+#eye .left,
+#eye .right {
+  display: flex;
+  width: 50%;
+  background: #fff;
+  border-radius: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#eye .left img,
+#eye .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#eye .left .plus,
+#eye .right .plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #E7E7E7;
+  font-size: 40px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,13 +526,24 @@ input[type="file"] {
 
 
 
-
-
-.bottom-nav {
+/* .bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+} */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  /* left: 0; */
+  width: 430px;
+  /* width: 100%; */
   background-color: #fff;
   border-top: 1px solid #e1e1e1;
   display: flex;
