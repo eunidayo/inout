@@ -1,22 +1,34 @@
+// sec03
 
-function openTab(tabName) {
-  // 모든 탭 버튼과 콘텐츠를 비활성화합니다.
-  const buttons = document.querySelectorAll('.tab-button');
-  const contents = document.querySelectorAll('.tab-content');
-
+// // 탭버튼
+function openTab2(tabName) {
+  // 모든 탭 버튼과 콘텐츠를 비활성화
+  const buttons = document.querySelectorAll('.sec03 .tab-button');
+  const contents = document.querySelectorAll('.sec03 .tab-content');
+  console.log(buttons);
   buttons.forEach(button => button.classList.remove('active'));
   contents.forEach(content => content.classList.remove('active'));
 
-  // 클릭한 버튼을 활성화하고, 관련 콘텐츠를 표시합니다.
-  document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+  // 클릭한 버튼을 활성화하고, 관련 콘텐츠를 표시
+  document.querySelector(`.sec03 button[onclick="openTab2('${tabName}')"]`).classList.add('active');
   document.getElementById(tabName).classList.add('active');
 }
 
-// 페이지 로드 시 기본적으로 첫 번째 탭을 열어놓습니다.
-document.addEventListener('DOMContentLoaded', () => {
-  openTab('weight');
-});
 
+
+
+
+
+
+
+
+
+
+
+
+// weight 체중
+
+// 몸무게 입력
 function showFooter() {
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('footer').style.display = 'flex';
@@ -38,27 +50,15 @@ function updateWeight() {
 
 
 
+// eye 눈바디
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Function to open file dialog and set the target
+// 카메라 
 function openFileDialog(target) {
   document.getElementById('fileInput').setAttribute('data-target', target);
   document.getElementById('fileInput').click();
 }
 
-// Function to preview image and update the target element
+
 function previewImage(event) {
   const fileInput = event.target;
   const target = fileInput.getAttribute('data-target');
@@ -80,80 +80,6 @@ function previewImage(event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 프로필사진 변경
-// function openFileDialog() {
-//   document.getElementById('fileInput').click();
-// }
-
-// function previewImage() {
-//   const fileInput = document.getElementById('fileInput');
-//   const profileImg = document.getElementById('profileImg');
-//   const file = fileInput.files[0];
-
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = function (e) {
-//       profileImg.src = e.target.result;
-//     };
-//     reader.readAsDataURL(file);
-//   }
-// }
 
 
 

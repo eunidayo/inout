@@ -1,4 +1,7 @@
 
+// 인바디
+// 정보 입력시 결과
+
 function calculateBMI() {
   const weight = parseFloat(document.getElementById('weight').value);
   const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters

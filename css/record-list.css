@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/* 구글아이콘 (google font */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+/* 구름 산스 코드 */
+@font-face {
+  font-family: 'goorm-sans-code';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-code.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -----------------------------시작---------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'goorm-sans-code';
+  font-weight: 800;
+  line-height: 21px;
+  /* outline: 1px solid navy; */
+}
+/* 부트스트랩때문에 생기는 자동 마진 초기화 시키기 */
+p,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.edit-button,
+.delete-button {
+  background: #3D759A;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.delete-button {
+  background: #c23d3d;
+}
+
+.edit-button:hover {
+  background: #2c5a7a;
+}
+
+.delete-button:hover {
+  background: #a32d2d;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3D759A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background: #2c5a7a;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal button {
+  background: #3D759A;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal button:hover {
+  background: #2c5a7a;
+}
