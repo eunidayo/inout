@@ -49,6 +49,96 @@
 
 
   <section class="sec01">
+    <div class="content" id="profile"><img src="/inout_project/images/main/sec01/sec01_profile.svg" alt=""></div>
+
+
+    <div class="content" id="nutrients">
+
+      <span>0 kcal 먹었어요 !</span>
+
+      <div>
+        <div>
+          <span class="circle01 white">
+            <span>탄</span>
+          </span>
+          <span class="percent">0 %</span>
+        </div>
+
+        <div>
+          <span class="circle01 yellow">
+            단</span>
+          <span class="percent">0 %</span>
+        </div>
+
+        <div>
+          <span class="circle01 blue">
+            <span>지</span>
+          </span>
+          <span class="percent">0 %</span>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="content" id="kcal">
+
+      <div class="dining">
+        <div class="circle02 ">
+
+          <img src="/inout_project/images/main/sec01/sec01_breakfast.svg" alt>
+
+        </div>
+
+        <div class="totalCalories">
+          <p>아침</p>
+          <p>0 kcal</p>
+        </div>
+      </div>
+
+      <div class="dining">
+        <div class="circle02 ">
+
+          <img src="/inout_project/images/main/sec01/sec01_lunch.svg" alt>
+
+        </div>
+
+        <div class="totalCalories">
+          <p>점심</p>
+          <p>0 kcal</p>
+        </div>
+      </div>
+
+      <div class="dining">
+        <div class="circle02 ">
+
+          <img src="/inout_project/images/main/sec01/sec01_dinner.svg" alt>
+
+        </div>
+
+        <div class="totalCalories">
+          <p>저녁</p>
+          <p>0 kcal</p>
+        </div>
+      </div>
+
+
+      <div class="dining">
+        <div class="circle02 ">
+
+          <img src="/inout_project/images/main/sec01/sec01_dessert.svg" alt>
+
+        </div>
+
+        <div class="totalCalories">
+          <p>간식</p>
+          <p>0 kcal</p>
+        </div>
+      </div>
 
 
 
@@ -57,42 +147,134 @@
 
 
 
+
+
+
+
+    </div>
+
+
+
+
+
+    <div class="content" id="etc">
+
+      <div class="dining">
+        <div class="etc-inner">
+
+          <img src="/inout_project/images/main/sec01//sec01_workout.svg" alt>
+          <p>운동</p>
+        </div>
+
+        <p>0 h</p>
+      </div>
+
+      <div class="dining">
+
+        <div class="etc-inner">
+          <img src="/inout_project/images/main/sec01/sec01_water.svg" alt>
+          <p>물 섭취</p>
+        </div>
+
+        <p>0 L</p>
+      </div>
+
+    </div>
 
   </section>
 
 
 
-
+  <!-- sec02 -->
   <section class="sec02">
-    <div class="tab-container">
-      <div class="tabs">
-        <button class="tab-button active" onclick="openTab('diet')">식단</button>
-        <button class="tab-button" onclick="openTab('water')">물</button>
-        <button class="tab-button" onclick="openTab('supplement')">영양제</button>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab('diet')">식단</button>
+      <button class="tab-button" onclick="openTab('water')">물</button>
+      <button class="tab-button" onclick="openTab('supplement')">영양제</button>
+    </div>
+
+
+    <div class="tab-content active" id="diet">
+
+      <div class="food-content" id="breakfast">
+        <div><img src="/inout_project/images/main/sec02/sec02_breakfast.svg" alt=""><span
+            class="material-symbols-outlined plus">
+            add
+          </span></div>
+        <p>아침</p>
       </div>
 
-      <div class="tab-content active" id="diet">
-        <h2>식단</h2>
-        <p>.</p>
 
+      <div class="food-content" id="lunch">
+        <div><img src="/inout_project/images/main/sec02/sec02_lunch.svg" alt=""><span
+            class="material-symbols-outlined plus">
+            add
+          </span></div>
+        <p>점심</p>
       </div>
 
-      <div class="tab-content" id="water">
-        <h2>물</h2>
-        <p>.</p>
 
+      <div class="food-content" id="dinner">
+        <div><img src="/inout_project/images/main/sec02/sec02_dinner.svg" alt=""><span
+            class="material-symbols-outlined plus">
+            add
+          </span></div>
+        <p>저녁</p>
       </div>
 
-      <div class="tab-content" id="supplement">
-        <h2>영양제</h2>
-        <p>.</p>
 
+      <div class="food-content" id="dessert">
+        <div><img src="/inout_project/images/main/sec02/sec02_dessert.svg" alt=""><span
+            class="material-symbols-outlined plus">
+            add
+          </span></div>
+        <p>간식</p>
+      </div>
+
+
+      <div class="bottom">
+        <div><img src="/inout_project/images/main/picture.svg" alt>
+          <p>기록 모아보기 !</p>
+        </div>
+        <button>보기</button>
       </div>
     </div>
+
+
+
+    <div class="tab-content" id="water">
+      <p>오늘의 물 섭취량은?</p>
+      <h2 id="water-amount">0.00L</h2>
+      <img src="/inout_project/images/main/sec02/sec02_water.svg" alt="">
+      <button id="record-water-button">기록하기</button>
+      <div class="bottom">
+        <div><img src="/inout_project/images/main/picture.svg" alt>
+          <p>기록 모아보기 !</p>
+        </div>
+        <button id="view-water-records-button">보기</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="tab-content" id="supplement">
+      <p>챙겨먹는 영양제가 있나요?</p>
+      <img src="/inout_project/images/main/sec02/sec02_supplement.svg" alt="">
+      <button>기록하기</button>
+      <div class="bottom">
+        <div><img src="/inout_project/images/main/picture.svg" alt>
+          <p>기록 모아보기 !</p>
+        </div>
+        <button>보기</button>
+      </div>
+
+
+    </div>
   </section>
-
-
-
 
 
   <!-- sec03 -->
@@ -204,7 +386,7 @@
   <div id="record-modal" class="modal">
     <div class="modal-content">
       <span class="close-button">&times;</span>
-      <h2>운동 기록하기</h2>
+      <h2>오늘의 운동 기록</h2>
       <label for="exercise-category">운동 부위</label>
       <select id="exercise-category">
         <option value="chest">가슴</option>
@@ -230,7 +412,7 @@
 
 
   <footer class="bottom-nav">
-    <a href="#home" class="nav-item">
+    <a href="/inout_project/html/main.html" class="nav-item">
       <i class="fas fa-home"></i>
       <!-- <span>홈</span> -->
     </a>

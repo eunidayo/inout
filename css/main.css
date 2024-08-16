@@ -5,9 +5,17 @@
 
 
 /* 구름 산스 코드 */
-@font-face {
+/* @font-face {
   font-family: 'goorm-sans-code';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-code.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* 온글잎 지우쏘낭 */
+@font-face {
+  font-family: 'Ownglyph_jiwoosonang';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_jiwoosonang.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -46,7 +54,112 @@ body {
 }
 
 /* sec01 */
-.sec01 {}
+.sec01 {
+  max-width: 430px;
+  width: 100%;
+  height: 730px;
+  background: #E28F9C;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 70px 0;
+}
+
+/* profile */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #CC7E8A;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+/* nutrients */
+#nutrients {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+#nutrients div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+#nutrients div .circle01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #fff;
+  color: #757575;
+}
+#nutrients .circle01.yellow {
+  background: #FDFFB8;
+}
+#nutrients .circle01.blue {
+  background: #89C2DE;
+}
+
+
+/*kcal  */
+#kcal {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.dining {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.dining .circle02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background: #fff;
+  opacity: 80%;
+}
+.dining .totalCalories {
+  display: flex;
+  flex-direction: column;
+}
+
+#diet {
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+/* etc */
+#etc {
+  display: flex;
+  width: 100%;
+  /* flex-direction: row; */
+  gap: 35px;
+}
+#etc .etc-inner {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+
 
 
 /* sec02 */
@@ -60,70 +173,129 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  padding: 65px 16px 119px 16px;
+  padding: 65px 16px 0px 16px;
 }
 
-
-.sec02 .tabs {
+.sec02 .food-content {
+  width: 190px;
+  height: 220px;
+  border-radius: 20px;
   display: flex;
-  width: 100%;
-  gap: 22px;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  background: #C580E1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  justify-content: space-between;
 }
+.sec02 .food-content div img {
+  width: 65px;
+  height: 78px;
+}
+.sec02 .food-content p {
+  display: flex;
+}
+#diet {
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+}
+.sec02 .food-content div {
+  display: flex;
+  justify-content: space-between;
+}
+.sec02 .food-content div .plus {
+  font-size: 48px;
+}
+#diet .bottom {
+  padding-top: 72px;
+}
+
 .sec02 .tab-button {
-  color: #CE7759;
-  cursor: pointer;
-  display: flex;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 800;
+  color: #A76ABF;
 }
 .sec02 .tab-button.active {
   color: #fff;
   text-align: center;
   font-size: 25px;
 }
-.sec02 .tab-content {
+#diet .bottom button,
+#water .bottom button,
+#supplement .bottom button {
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: #C580E1;
+}
+.sec02 .bottom {
+  padding-top: 0px;
+}
+#supplement .bottom {
+  padding-top: 27px;
+}
+#supplement button,
+#water button {
+  width: 100px;
+  height: 40px;
+  background: #65558F;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+/* sec02,03 공통 */
+.tab-button {
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+.tabs {
+  display: flex;
+  width: 100%;
+  gap: 22px;
+}
+.tab-content {
+  display: none;
   text-align: center;
   align-items: center;
   gap: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tab-content {
-  display: none;
-}
 .tab-content.active {
   display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* background: #FF8D67; */
+  border: none;
 }
+.tab-content h2 {
+  font-size: 40px;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  padding-top: 105px;
+  justify-content: space-between;
+}
+.bottom div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#water button:hover,
+#weight button:hover,
+#inbody button:hover,
+#workout button:hover {
+  opacity: 85%;
+}
+
+
 /* sec03 */
 .sec03 {
   max-width: 430px;
@@ -135,44 +307,17 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  padding: 65px 16px 119px 16px;
+  padding: 65px 16px 0px 16px;
   position: relative;
 }
-.sec03 .tabs {
-  display: flex;
-  width: 100%;
-  gap: 22px;
-}
+
 .sec03 .tab-button {
   color: #CE7759;
-  cursor: pointer;
-  display: flex;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 800;
 }
 .sec03 .tab-button.active {
   color: #fff;
   text-align: center;
   font-size: 25px;
-}
-.sec03 .tab-content {
-  text-align: center;
-  align-items: center;
-  gap: 30px;
-}
-.sec03 .tab-content p {
-  text-align: center;
-}
-.sec03 .tab-content h2 {
-  font-size: 40px;
-}
-.sec03 .tab-content.active {
-
-  width: 100%;
-  flex-direction: column;
-  background: #FF8D67;
-  border: none;
 }
 #weight button,
 #inbody button,
@@ -182,11 +327,6 @@ body {
   background: #A44222;
   border-radius: 20px;
 }
-#weight button:hover,
-#inbody button:hover {
-  opacity: 85%;
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -247,35 +387,10 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
-
 .footer button:hover {
   opacity: 0.8;
 }
 
-
-#inbody .bottom,
-#workout .bottom {
-  width: 100%;
-  display: flex;
-  padding-top: 75px;
-  justify-content: space-between;
-}
-#inbody .bottom div,
-#eye .bottom div,
-#workout .bottom div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-#inbody .bottom button,
-#eye .bottom button,
-#workout .bottom button {
-  width: 90px;
-  height: 30px;
-  border-radius: 20px;
-  background: #FE7A53;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 #eye .human {
   display: flex;
   width: 100%;
@@ -306,45 +421,17 @@ body {
   width: 90%;
 }
 #eye .bottom {
-  width: 100%;
-  display: flex;
-  padding-top: 15px;
-  justify-content: space-between;
+  padding-top: 45px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#inbody .bottom button,
+#eye .bottom button,
+#workout .bottom button {
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  background: #FE7A53;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 
 
 /* sec04 */
@@ -358,8 +445,9 @@ body {
   /* align-items: center; */
   flex-direction: column;
   gap: 50px;
-  padding: 65px 16px 119px 16px;
+  padding: 65px 16px 0px 16px;
 }
+
 .sec04 .sec04_inner {
   display: flex;
   flex-direction: column;
@@ -384,9 +472,8 @@ body {
 .sec04 .sec04_inner div h2 p {
   font-size: 24px;
 }
-
 #workout .bottom {
-  padding-top: 0px;
+  padding-top: 15px;
   flex-direction: row;
 }
 #workout .bottom div {
@@ -395,9 +482,7 @@ body {
 #workout button {
   background: #3D759A;
 }
-#workout button:hover {
-  opacity: 85%;
-}
+
 #workout .bottom button {
   background: #6EA8CF;
 }
@@ -435,7 +520,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
 }
 
