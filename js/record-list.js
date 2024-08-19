@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     records.forEach((record, index) => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `
-        부위: ${record.category}, 시간: ${record.time}분, 중량: ${record.weight}kg, 횟수: ${record.reps}
+        [ 부위 ] ${record.category}, [ 시간 ] ${record.time}분, [ 중량 ] ${record.weight}kg, 횟수: ${record.reps}
         <button class="edit-button" data-index="${index}">수정</button>
         <button class="delete-button" data-index="${index}">삭제</button>
       `;

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 저장 버튼 클릭 이벤트
   saveWaterRecordButton.addEventListener('click', () => {
     localStorage.setItem('waterAmount', currentAmount.toFixed(2));
-    window.location.href = 'main.html#water';  // 원래 페이지로 이동
+    window.location.href = '/inout_project/html/main.html#water';  // main.html의 #water 섹션으로 이동
   });
 
   // 페이지 로드 시 현재 물 양 표시

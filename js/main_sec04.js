@@ -49,3 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // 페이지 로드 시 총 시간 업데이트
   updateTotalTime();
 });
+
+
+
+
+
+
+
+
+
+
+

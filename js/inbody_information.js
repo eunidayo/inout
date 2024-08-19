@@ -45,4 +45,3 @@ function calculateBMI() {
   document.getElementById('result').innerText = resultText;
 }
 
-

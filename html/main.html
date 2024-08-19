@@ -243,21 +243,19 @@
 
 
 
+
     <div class="tab-content" id="water">
       <p>오늘의 물 섭취량은?</p>
       <h2 id="water-amount">0.00L</h2>
       <img src="/inout_project/images/main/sec02/sec02_water.svg" alt="">
       <button id="record-water-button">기록하기</button>
       <div class="bottom">
-        <div><img src="/inout_project/images/main/picture.svg" alt>
+        <div><img src="/inout_project/images/main/picture.svg" alt="">
           <p>기록 모아보기 !</p>
         </div>
         <button id="view-water-records-button">보기</button>
       </div>
     </div>
-
-
-
 
 
 
@@ -294,18 +292,18 @@
       <button class="w" onclick="showFooter()">기록하기</button>
     </div>
 
-
+    <!-- 오버레이와 푸터 -->
     <div class="overlay" id="overlay" onclick="hideFooter()"></div>
     <div class="footer" id="footer">
       <div>
-        <p>체중 입력</p><a href="#"><span class="material-symbols-outlined">
-            close
-          </span></a>
+        <p>체중 입력</p>
+        <a href="/inout_project/html/main.html#weight" onclick="closeFooterAndScrollToWeight()">
+          <span class="material-symbols-outlined">close</span>
+        </a>
       </div>
       <input type="number" id="weightInput" placeholder="00.0kg" step="0.1">
       <button onclick="updateWeight()">완료</button>
     </div>
-
 
 
 

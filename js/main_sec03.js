@@ -28,22 +28,43 @@ function openTab2(tabName) {
 
 // weight 체중
 
-// 몸무게 입력
-function showFooter() {
-  document.getElementById('overlay').style.display = 'block';
-  document.getElementById('footer').style.display = 'flex';
-}
-
-function hideFooter() {
-  document.getElementById('overlay').style.display = 'none';
+// 푸터를 숨기고 #weight 섹션으로 스크롤
+function closeFooterAndScrollToWeight() {
+  // 푸터와 오버레이 숨기기
   document.getElementById('footer').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+
+  // #weight 섹션으로 스크롤
+  document.getElementById('weight').scrollIntoView({ behavior: 'smooth' });
 }
 
+// 푸터를 보이게 하는 함수
+function showFooter() {
+  document.getElementById('footer').style.display = 'flex'; // 'block' 대신 'flex'를 사용할 수 있습니다.
+  document.getElementById('overlay').style.display = 'block';
+}
+
+// 푸터를 숨기는 함수
+function hideFooter() {
+  document.getElementById('footer').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
+}
+
+// 체중 업데이트 함수
 function updateWeight() {
+  // 입력값 가져오기
   const weightInput = document.getElementById('weightInput').value;
-  const weightDisplay = document.getElementById('weightDisplay');
-  weightDisplay.textContent = `${weightInput}kg`;
-  hideFooter(); // Hide the footer and overlay after saving
+
+  // 입력값 유효성 검사
+  if (weightInput) {
+    // #weight h2 요소에 값 업데이트
+    document.getElementById('weightDisplay').textContent = `${weightInput}kg`;
+
+    // 푸터 숨기기 및 #weight 섹션으로 스크롤
+    closeFooterAndScrollToWeight();
+  } else {
+    alert('체중을 입력해주세요.');
+  }
 }
 
 

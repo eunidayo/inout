@@ -16,21 +16,8 @@ function openTab(tabName) {
 
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  const recordWaterButton = document.getElementById('record-water-button');
-  const viewWaterRecordsButton = document.getElementById('view-water-records-button');
   const waterAmountElement = document.getElementById('water-amount');
-
-  // 물 기록 입력 페이지로 이동
-  recordWaterButton.addEventListener('click', () => {
-    window.location.href = 'record-water.html';
-  });
-
-  // 물 기록 목록 보기 버튼 클릭 시
-  viewWaterRecordsButton.addEventListener('click', () => {
-    window.location.href = 'water-record-list.html';  // 물 기록 목록 페이지로 이동
-  });
 
   // 페이지 로드 시 물 섭취량 업데이트
   function updateWaterAmount() {
@@ -42,5 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 물 섭취량 업데이트
   updateWaterAmount();
+
+  // 물 기록 버튼 클릭 시 페이지 이동
+  document.getElementById('record-water-button').addEventListener('click', () => {
+    window.location.href = 'record-water.html';
+  });
+
+  // 물 기록 목록 보기 버튼 클릭 시 페이지 이동
+  document.getElementById('view-water-records-button').addEventListener('click', () => {
+    window.location.href = 'water-record-list.html';
+  });
 });
