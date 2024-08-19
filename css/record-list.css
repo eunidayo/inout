@@ -73,7 +73,7 @@ li {
   padding: 10px;
   border-radius: 10px;
   position: relative;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 
 .edit-button,
@@ -116,9 +116,10 @@ li {
 .modal {
   display: none;
   position: fixed;
+  /* max-width: 430px; */
   top: 0;
-  left: 0;
-  width: 100%;
+  /* left: 20%; */
+  width: 430px;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
@@ -128,10 +129,10 @@ li {
 
 .modal-content {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   width: 80%;
-  max-width: 600px;
+  max-width: 430px;
   position: relative;
 }
 
@@ -141,6 +142,7 @@ li {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+  color: #515151;
 }
 
 .modal label {
@@ -151,10 +153,10 @@ li {
 .modal input,
 .modal select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 5px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .modal button {
@@ -162,11 +164,15 @@ li {
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  width: 100%;
 }
 
 .modal button:hover {
   background: #2c5a7a;
+}
+h2 {
+  color: #515151;
 }

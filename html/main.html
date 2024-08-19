@@ -44,6 +44,32 @@
 
 
 
+  <header>
+    <div class="header">
+      <span class="material-symbols-outlined chevron_left" id="prev-day">chevron_left</span>
+      <div class="inner">
+        <span class="material-symbols-outlined calendar_month">calendar_month</span>
+        <div class="date">
+          <p id="current-date">8.14(수)</p>
+          <span class="material-symbols-outlined arrow_drop_down" id="show-calendar">arrow_drop_down</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined chevron_right" id="next-day">chevron_right</span>
+    </div>
+  </header>
+
+  <!-- Calendar Modal -->
+  <div id="calendar-modal" class="calendar-modal">
+    <div class="calendar-content">
+      <span class="close">&times;</span>
+      <div class="calendar-controls">
+        <button id="prev-month" class="calendar-control">◀</button>
+        <span id="calendar-month-year"></span>
+        <button id="next-month" class="calendar-control">▶</button>
+      </div>
+      <div id="calendar" class="calendar"></div>
+    </div>
+  </div>
 
 
 
@@ -427,6 +453,7 @@
     crossorigin="anonymous"></script>
   <!-- swiper.js 임포트 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/inout_project/js/main_header.js"></script>
   <script src="/inout_project/js/main_sec02.js"></script>
   <script src="/inout_project/js/main_sec03.js"></script>
   <script src="/inout_project/js/main_sec04.js"></script>
