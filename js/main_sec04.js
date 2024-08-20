@@ -1,6 +1,5 @@
 // sec04
 
-// 모달 [ 기록 저장, 기록 목록보기, 총 시간 업데이트 ]
 document.addEventListener('DOMContentLoaded', () => {
   const recordButton = document.getElementById('record-button');
   const viewRecordsButton = document.getElementById('view-records-button');
@@ -8,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = document.querySelector('#record-modal .close-button');
   const saveRecordButton = document.getElementById('save-record');
   const totalTimeElement = document.getElementById('total-time');
+  const totalTimeDiningElement = document.getElementById('total-time-dining'); // 두 번째 위치의 운동 시간 요소
   let records = JSON.parse(localStorage.getItem('records')) || [];
 
   // 기록 모달 열기
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateTotalTime() {
     const totalTime = records.reduce((sum, record) => sum + record.time, 0);
     totalTimeElement.innerHTML = `${totalTime} <p>분</p>`;
+
+    totalTimeDiningElement.textContent = `${totalTime} 분`;
   }
 
   // 페이지 로드 시 총 시간 업데이트

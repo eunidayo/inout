@@ -178,29 +178,6 @@ th {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* sec01 */
 .sec01 {
   max-width: 430px;
@@ -214,7 +191,9 @@ th {
   gap: 50px;
   padding: 50px 70px 0;
 }
-
+.sec01 p {
+  font-size: 15px;
+}
 /* profile */
 #profile {
   display: flex;
@@ -259,10 +238,10 @@ th {
 /*kcal  */
 #kcal {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 10px;
+  gap: 25px;
   justify-content: center;
 }
 
@@ -299,8 +278,7 @@ th {
 #etc {
   display: flex;
   width: 100%;
-  /* flex-direction: row; */
-  gap: 35px;
+  gap: 15px;
 }
 #etc .etc-inner {
   display: flex;

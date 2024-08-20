@@ -16,16 +16,57 @@ function openTab(tabName) {
 
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const waterAmountElement = document.getElementById('water-amount');
+
+//   // 페이지 로드 시 물 섭취량 업데이트
+//   function updateWaterAmount() {
+//     const waterAmount = localStorage.getItem('waterAmount');
+//     if (waterAmount !== null) {
+//       waterAmountElement.textContent = `${waterAmount}L`;
+//     } else {
+//       waterAmountElement.textContent = '0.00L';
+//     }
+//   }
+
+//   // 물 섭취량 업데이트
+//   updateWaterAmount();
+
+//   // 물 기록 버튼 클릭 시 페이지 이동
+//   document.getElementById('record-water-button').addEventListener('click', () => {
+//     window.location.href = 'record-water.html';
+//   });
+
+//   // 물 기록 목록 보기 버튼 클릭 시 페이지 이동
+//   document.getElementById('view-water-records-button').addEventListener('click', () => {
+//     window.location.href = 'water-record-list.html';
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const waterAmountElement = document.getElementById('water-amount');
+  const waterAmountDiningElement = document.getElementById('water-amount-dining');
 
   // 페이지 로드 시 물 섭취량 업데이트
   function updateWaterAmount() {
     const waterAmount = localStorage.getItem('waterAmount');
     if (waterAmount !== null) {
       waterAmountElement.textContent = `${waterAmount}L`;
+      waterAmountDiningElement.textContent = `${waterAmount} L`;
     } else {
       waterAmountElement.textContent = '0.00L';
+      waterAmountDiningElement.textContent = '0 L';
     }
   }
 
